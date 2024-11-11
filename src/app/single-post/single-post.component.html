@@ -1,0 +1,44 @@
+<div *ngIf="post" class="container-fluid body-background">
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-md-6 job-image">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="mt-4">Images</h5>
+                        <div class="image-container">
+                            <button class="arrow-button left-arrow" (click)="prevImage()"><i
+                                    class="fa fa-chevron-left"></i></button>
+                            <img [src]="post!.imageUrl[currentImageIndex]" alt="Slide" class="img-fluid">
+                            <button class="arrow-button right-arrow" (click)="nextImage()"><i
+                                    class="fa fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 job-description">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">{{ post!.title }}</h2>
+                        <p class="card-text price">Price: {{ post!.price.toFixed(2) }} DT</p>
+                        <p class="card-text username">{{ post!.username }}</p>
+                        <small class="card-text text-muted">Posted Few Hours Ago</small>
+                        <hr>
+                        <h3 class="mt-4">Job Description</h3>
+                        <p>{{ post!.content }}</p>
+                        <div class="text-end">
+                            <button
+                                *ngIf="(userRole$ | async) === 'client' || (userRole$ | async) === 'prestateur' || (userRole$ | async) === 'admin'"
+                                class="btn btn-outline-primary mx-2" type="button"
+                                (click)="navigateToTargetWithParameter()">Apply</button>
+                            <button
+                                *ngIf="(userRole$ | async) !== 'client' && (userRole$ | async) !== 'prestateur' && (userRole$ | async) !== 'admin'"
+                                class="btn btn-primary" type="button" (click)="navigateToLogin()">Login To
+                                Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

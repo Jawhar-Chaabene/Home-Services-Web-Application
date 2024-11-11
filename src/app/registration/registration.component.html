@@ -1,0 +1,42 @@
+<div class="registration-container">
+    <h2>Registration</h2>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" [(ngModel)]="username" class="form-input" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" [(ngModel)]="email" class="form-input" required>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" [(ngModel)]="password" class="form-input" required>
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" [(ngModel)]="phone" class="form-input" required>
+    </div>
+    <div class="form-group">
+        <label for="gender">Gender</label>
+        <select id="gender" [(ngModel)]="gender" class="form-input" required>
+            <option value="Homme">Homme</option>
+            <option value="Femme">Femme</option>
+        </select>
+    </div>
+
+    <div class="form-group radio-group">
+        <label>Role</label>
+        <div class="radio-option">
+            <input type="radio" name="role" [(ngModel)]="role" value="client" id="client" required>
+            <label for="client">Client</label>
+        </div>
+        <div class="radio-option">
+            <input type="radio" name="role" [(ngModel)]="role" value="prestateur" id="prestateur" required>
+            <label for="prestateur">Prestateur</label>
+        </div>
+
+    </div>
+    <button (click)="register()" class="register-button">Register</button>
+    <button routerLink="/login" class="cancel-button">Cancel</button>
+</div>

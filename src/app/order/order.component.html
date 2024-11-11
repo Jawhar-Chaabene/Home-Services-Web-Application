@@ -1,0 +1,55 @@
+<div class="reservations-container">
+    <h2 class="reservations-title">Orders</h2>
+    <table class="reservation-table">
+        <thead>
+            <tr>
+                <th *ngIf="userRole==='prestateur'">Client </th>
+                <th *ngIf="userRole==='client'">prestateur</th>
+                <th>Date</th>
+                <th>Time Start</th>
+                <th>Time End</th>
+                <th>Message</th>
+                <th *ngIf="userRole==='client'">Status</th>
+                <th *ngIf="userRole==='prestateur'">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let reservation of reservations">
+                <td *ngIf="userRole==='prestateur'">{{ reservation.clientId }}</td>
+                <td *ngIf="userRole==='client'">{{ reservation.username }}</td>
+                <td>{{ reservation.date }}</td>
+                <td>{{ reservation.time }}</td>
+                <td>{{ reservation.timeEnd }}</td>
+                <td>{{ reservation.message }}</td>
+                <td class="reservation-status" *ngIf="userRole==='client'">
+                    <span *ngIf="reservation.acceptation === true">Accepted</span>
+                    <span *ngIf="reservation.acceptation === false">Rejected</span>
+                    <span *ngIf="reservation.acceptation !== true && reservation.acceptation !== false">Pending</span>
+                </td>
+                <td *ngIf="userRole==='prestateur'">
+                    <button class="action-button confirm-button" (click)="updateAcceptation(reservation, true)"
+                        *ngIf="reservation.acceptation !== true">Confirm</button>
+                    <button class="action-button reject-button" (click)="updateAcceptation(reservation, false)"
+                        *ngIf="reservation.acceptation !== false">Reject</button>
+                </td>
+
+                <!-- <td class="reservation-status">
+                    <span *ngIf="reservation.acceptation === true">Accepted</span>
+                    <span *ngIf="reservation.acceptation === false">Rejected</span>
+                    <span *ngIf="reservation.acceptation !== true && reservation.acceptation !== false">Pending</span>
+                </td>
+                <td>
+                    <button class="action-button confirm-button" (click)="updateAcceptation(reservation.id.toString(), true, reservation.clientId)" *ngIf="!reservation.acceptation">Confirm</button>
+                    <button class="action-button reject-button" (click)="updateAcceptation(reservation.id.toString(), false, reservation.clientId)" *ngIf="!reservation.acceptation">Reject</button>
+                </td> -->
+            </tr>
+        </tbody>
+    </table>
+
+
+    <div class="pagination-buttons">
+        <button class="pagination-button" (click)="previousPage()">Previous</button>
+        <button class="pagination-button" (click)="nextPage()">Next</button>
+    </div>
+
+</div>

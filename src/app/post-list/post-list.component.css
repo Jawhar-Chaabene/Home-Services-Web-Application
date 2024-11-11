@@ -1,0 +1,211 @@
+.container-fluid {
+    background-color: #f2f2f2;
+    padding: 0;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    margin-right: 150px;
+}
+
+.job {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.sidebar {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.sidebar h4 {
+    font-size: 30px;
+    color: #178601;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    /* Change font family */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.category-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-list li {
+    margin-bottom: 10px;
+}
+
+.category-list li a {
+    display: block;
+    padding: 10px;
+    color: #525252;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    /* Increase font weight */
+    font-family: Arial, sans-serif;
+    /* Change font family */
+    /* Add text shadow */
+    transition: color 0.3s ease, background-color 0.3s ease;
+    /* Add transition */
+}
+
+.delete-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: bottom 50px;
+    ;
+    background-color: #dc3545;
+
+    transition: background-color 0.3s;
+}
+
+.category-list li a:hover {
+    background-color: #f0f0f0;
+    /* Change background color on hover */
+    color: #0026ff;
+    /* Change text color on hover */
+}
+
+
+/* Posts Section Styles */
+.posts-section {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.posts-section .row {
+    margin: 0 -15px;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.orange-button {
+    background-color: #003cbd;
+    /* Orange color */
+    color: white;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.orange-button:hover {
+    background-color: #022779;
+    /* Darker orange color on hover */
+}
+
+
+.empty-message {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+}
+
+.card {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    height: 600px;
+    /* Set a fixed height for the card */
+    overflow: hidden;
+    /* Hide overflow content */
+}
+
+.card:hover {
+    transform:
+        translateY(-5px);
+    /* Adjust the translateY value as needed */
+}
+
+.card-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.card-text {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 5px;
+    overflow: hidden;
+    /* Hide overflow content */
+    text-overflow: ellipsis;
+    /* Add ellipsis for overflow text */
+    white-space: nowrap;
+    /* Prevent text wrapping */
+}
+
+.compo_logo {
+    border-radius: 20px;
+    width: 100%;
+    height: 200px;
+    /* Adjust the image height */
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.text-muted {
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.text-end {
+    text-align: right;
+}
+
+@media (min-width: 768px) {
+    .card {
+        padding: 30px;
+    }
+
+    .compo_logo {
+        margin-bottom: 20px;
+    }
+}

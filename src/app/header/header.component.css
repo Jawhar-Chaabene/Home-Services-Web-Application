@@ -1,0 +1,108 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #049c25;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #049c25;
+}
+
+/* Dropdown menu styles */
+/* Dropdown menu styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    /* White background color */
+    min-width: 200px;
+    /* Increased width */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 10px 0;
+    /* Add some padding */
+    font-size: 16px;
+    /* Increase font size */
+}
+
+.dropdown-menu li {
+    display: block;
+}
+
+.dropdown-menu li a {
+    padding: 8px 20px;
+    /* Increased padding */
+    text-decoration: none;
+    color: #333;
+    /* Darker text color */
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f0f0f0;
+    /* Light gray background color on hover */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Dropdown arrow styles */
+.caret {
+    font-size: 20px;
+    /* Increased font size */
+    margin-left: 5px;
+    vertical-align: middle;
+    color: #049c25;
+}
+
+/* Username styles */
+.username {
+    cursor: pointer;
+    font-weight: bold;
+    /* Bold font weight */
+    color: #333;
+    /* Darker text color */
+}
+
+.username span {
+    margin-right: 5px;
+}

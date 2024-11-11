@@ -1,0 +1,123 @@
+<head>
+    <!-- Other meta tags and stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<div class="container-fluid body-background">
+    <div class="container pt-3">
+        <div class="row justify-content-center">
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                <div class="sidebar">
+                    <h4>Categories</h4>
+                    <ul class="category-list">
+                        <!-- Add (click) event handler to each category link -->
+                        <li *ngFor="let category of categories | keyvalue">
+                            <a (click)="filterByCategory(category.key)"
+                                [ngClass]="{ 'active': selectedCategory === category.key }">{{ category.value }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Posts Section -->
+            <div class="col-md-9">
+                <div class="job">
+                    <div class="search-bar">
+                        <input type="text" [(ngModel)]="searchQuery" placeholder="Search by title..."
+                            class="form-control">
+                    </div>
+                    <button mat-raised-button color="primary" (click)="openDialog()">ajouter</button>
+
+                    <button *ngIf="(userRole$ | async) === 'prestateur'" (click)="createNewPost()"
+                        class="orange-button">
+                        <i class="fas fa-plus"></i> <!-- Font Awesome plus icon -->
+                    </button>
+
+                    <div *ngIf="filterPosts().length === 0" class="empty-message">
+                        No posts available.
+                    </div>
+
+                    <!-- Adjusted to wrap every 3 posts in a row -->
+                    <div class="row">
+                        <div class="col-md-4" *ngFor="let post of filterPosts(); let i = index;">
+                            <div class="card mb-4" (click)="viewPost(post.id)">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h5 class="card-title">{{ post.title }}</h5>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <p class="card-text">{{ post.content | slice:0:150 }}...</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 text-center">
+                                            <img class="compo_logo" height="200" [src]="post.imageUrl[0]"
+                                                alt="Post Image">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="card-text">
+                                                <p><i class="fa fa-suitcase" aria-hidden="true"></i> {{
+                                                    post.categoryName }}
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="card-text">
+                                                <p>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-cash" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M1.5 2a.5.5 0 0 1 .5-.5h12a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5V2zm-1 5.5a.5.5 0 0 1 .5-.5H15a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H1a.5.5 0 0 1-.5-.5v-3z" />
+                                                        <path
+                                                            d="M.5 10a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H1a.5.5 0 0 1-.5-.5v-3zM0 9.5a.5.5 0 0 1 .5-.5h16a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1z" />
+                                                    </svg>
+                                                    Price: {{ post.price.toFixed(2) }} DT
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="card-text">
+                                                <p><i class="fa fa-user" aria-hidden="true"></i> {{ post.username }}</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card-text">
+                                                <p><i class="fa fa-map-marker" aria-hidden="true"></i> {{
+                                                    post.localisation
+                                                    }}</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row pt-2">
+                                        <div class="col-md-6">
+                                            <small class="text-muted">Few Hours Ago</small>
+                                        </div>
+                                        <div class="col-md-6 text-end">
+
+                                            <button class="delete-button" *ngIf=" (userRole$ | async) === 'admin'"
+                                                (click)="deletePost(post.id)">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

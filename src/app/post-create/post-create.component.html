@@ -1,0 +1,43 @@
+<form class="create-post-form" (submit)="onSubmit()" enctype="multipart/form-data">
+    <h2 class="form-title">Create your post</h2> <!-- Titre ajouté -->
+
+    <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" [(ngModel)]="newPost.title" required>
+    </div>
+    <div class="form-group">
+        <label for="content">Content:</label>
+        <textarea id="content" name="content" [(ngModel)]="newPost.content" required></textarea>
+    </div>
+    <div class="form-group file-upload">
+        <label for="customFile">Images:</label>
+        <input type="file" class="custom-file-input" id="customFile" accept="image/*" multiple formControlName="image"
+            (change)="previewImages($event)">
+        <label class="custom-file-label" for="customFile">Choose images</label>
+        <div class="image-container" *ngIf="imageUrlList.length > 0">
+            <ng-container *ngFor="let imageUrl of imageUrlList; let i = index">
+                <img [src]="imageUrl" alt="Image Preview" class="preview-image">
+            </ng-container>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="category">Category:</label>
+        <select class="form-control" id="category" name="category" [(ngModel)]="newPost.categoryId" required>
+            <option *ngFor="let category of categories" [value]="category.id">{{ category.name }}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" [(ngModel)]="newPost.price">
+    </div>
+    <div class="form-group">
+        <label for="localisation">Localisation:</label>
+        <select class="form-control" id="localisation" name="localisation" [(ngModel)]="newPost.localisation" required>
+            <option *ngFor="let loc of localisations" [value]="loc">{{ loc }}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <button type="submit">Create Post</button>
+        <button mat-button mat-dialog-close color="warn" (click)="close()">Annuler</button>
+    </div>
+</form>

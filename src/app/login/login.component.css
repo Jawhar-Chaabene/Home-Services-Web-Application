@@ -1,0 +1,118 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 250px;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: bold;
+  color: #049c25;
+  font-family: "Arial", sans-serif;
+}
+
+.description {
+  font-size: 30px;
+  color: #000000;
+}
+
+.right-container {
+  flex-grow: 1;
+  /* This will make the right-container grow to fill the available space */
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 150px;
+  margin-left: 300px;
+  padding: 30px;
+  border: 1px solid #dddfe2;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-input {
+  width: 94%;
+  padding: 10px;
+  border: 1px solid #dddfe2;
+  border-radius: 5px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #049c25;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.login-button:hover {
+  background-color: #027a1b;
+}
+
+.form-links {
+  margin-top: 10px;
+  text-align: center;
+  /* Center align form links */
+}
+
+.form-link {
+  margin-top: 10px;
+  text-align: center;
+  /* Center align form links */
+}
+
+.form-links a {
+  color: #049c25;
+  text-decoration: none;
+}
+
+.form-links a:hover {
+  text-decoration: underline;
+}
+
+.register-button {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #2747ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.register-button:hover {
+  background-color: #2f4df5;
+}
+
+.line-separator {
+  margin: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Style for the error message container */
+.error-container {
+  background-color: #f8d7da;
+  /* Red background color */
+  color: #721c24;
+  /* Dark red text color */
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Style for the error message */
+.error-message {
+  font-weight: bold;
+}

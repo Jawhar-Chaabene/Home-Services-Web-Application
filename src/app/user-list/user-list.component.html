@@ -1,0 +1,34 @@
+<div class="container">
+    <h2 class="title">User List</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users">
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.phone }}</td>
+                    <td>{{ user.role }}</td>
+                    <td [ngClass]="{ 'text-success': user.status, 'text-danger': !user.status }">
+                        {{ user.status ? 'Active' : 'Inactive' }}
+                    </td>
+                    <td>
+                        <button *ngIf="user.status" (click)="banUser(user.id)" class="btn btn-danger">Ban</button>
+                        <button *ngIf="!user.status" (click)="unbanUser(user.id)" class="btn btn-success">Unban</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

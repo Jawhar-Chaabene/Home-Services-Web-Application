@@ -1,0 +1,28 @@
+<div class="container-fluid body-background">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="sidebar">
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let category of categories">
+              <a href="#" (click)="onSelectCategory(category.name)">{{ category.name }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="container pt-3 main-content">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="job" *ngIf="posts">
+                <!-- Your post content here -->
+              </div>
+            </div>
+            <div class="col-md-4">
+              <!-- Your existing layout content here -->
+              <!-- Adjusted to include the rest of your layout content -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

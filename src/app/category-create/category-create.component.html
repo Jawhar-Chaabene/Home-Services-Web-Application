@@ -1,0 +1,30 @@
+<form #categoryForm="ngForm" (ngSubmit)="onSubmit()" class="category-form">
+    <div class="form-group">
+        <label for="name">Category Name</label>
+        <input type="text" class="form-control" id="name" name="name" [(ngModel)]="newCategory.name" required>
+        <div *ngIf="categoryForm.controls['name'].errors?.['required'] && categoryForm.controls['name'].touched"
+            class="invalid-feedback">
+            Category name is required.
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="sous_categorie">Description</label>
+        <input type="text" class="form-control" id="sous_categorie" name="sous_categorie"
+            [(ngModel)]="sous_categorieInput">
+        <!-- Displaying current sous_categorie values -->
+        <div *ngIf="newCategory.sous_categorie.length > 0">
+            <label>Current Sous Categories:</label>
+            <ul>
+                <li *ngFor="let sous_categorie of newCategory.sous_categorie">{{ sous_categorie }}</li>
+            </ul>
+        </div>
+        <!-- Displaying validation error if required -->
+        <div *ngIf="categoryForm.controls['sous_categorie'].errors?.['required'] && categoryForm.controls['sous_categorie'].touched"
+            class="invalid-feedback">
+            Sous category is required.
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

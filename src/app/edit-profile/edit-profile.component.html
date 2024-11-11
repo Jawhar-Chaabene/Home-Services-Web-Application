@@ -1,0 +1,27 @@
+<div class="popup-container">
+    <div class="popup">
+        <h2>EDIT PROFILE</h2>
+        <form class="edit-profile-form" (ngSubmit)="saveProfile()">
+            <mat-form-field class="form-field">
+                <input matInput placeholder="Name" name="name" [(ngModel)]="currentUser.username" required
+                    class="mat-input-element">
+            </mat-form-field>
+            <mat-form-field class="form-field">
+                <input matInput placeholder="Email" name="email" [(ngModel)]="currentUser.email" required
+                    class="mat-input-element">
+            </mat-form-field>
+
+            <mat-form-field class="form-field">
+                <input matInput placeholder="Phone" name="phone" [(ngModel)]="currentUser.phone" required
+                    class="mat-input-element">
+            </mat-form-field>
+            <!-- Input field for uploading a new profile image -->
+            <div class="form-field">
+                <input type="file" (change)="onFileSelected($event)" accept="image/*" />
+            </div>
+            <!-- Add additional fields as needed -->
+
+            <button mat-raised-button color="primary" type="submit">Save</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,74 @@
+.registration-container {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 20px;
+    border: 1px solid #dddfe2;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: #ff0000;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-input {
+    width: 94%;
+    padding: 10px;
+    border: 1px solid #dddfe2;
+    border-radius: 5px;
+}
+
+.radio-group {
+    margin-bottom: 15px;
+}
+
+.radio-option {
+    margin-bottom: 5px;
+}
+
+.register-button,
+.cancel-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.register-button {
+    background-color: #049c25;
+    color: #fff;
+}
+
+.register-button:hover {
+    background-color: #027a1b;
+}
+
+.cancel-button {
+    background-color: #f44336;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.cancel-button:hover {
+    background-color: #d32f2f;
+}

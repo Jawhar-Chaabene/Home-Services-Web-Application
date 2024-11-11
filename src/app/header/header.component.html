@@ -1,0 +1,28 @@
+<header>
+  <div class="logo"><a routerLink="/">FastDeal</a></div>
+  <nav>
+    <ul>
+      <li><a routerLink="/"><strong>Home</strong></a></li>
+
+      <li><a routerLink="/posts"><strong>Posts</strong></a></li>
+      <!-- Dropdown menu for Profile and Orders -->
+      <li *ngIf="isAuthenticated">
+        <a><strong>{{ username }}</strong></a>
+      </li>
+      <li *ngIf="isAuthenticated" class="dropdown">
+        <span class="caret">&#9660;</span>
+        <ul class="dropdown-menu">
+          <li><a [routerLink]="userRole === 'client' ? '/profil' : '/profil'"><strong>Profile</strong></a></li>
+          <li *ngIf="isAuthenticated && (isPrest() || isClient())"><a routerLink="/orders"><strong>Orders</strong></a>
+          </li>
+          <li *ngIf="isAuthenticated && isAdmin()"><a routerLink="/category"><strong> Category</strong></a></li>
+          <li *ngIf="isAuthenticated && isAdmin()"><a routerLink="/users"><strong> List of users</strong></a></li>
+          <li *ngIf="isAuthenticated"><a (click)="logout()"><strong> Logout</strong></a></li>
+
+        </ul>
+      </li>
+
+      <li *ngIf="!isAuthenticated"><a routerLink="/login"><strong> Login</strong></a></li>
+    </ul>
+  </nav>
+</header>

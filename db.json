@@ -1,0 +1,323 @@
+{
+  "posts": [
+    {
+      "id": "5540",
+      "title": "Photographiste",
+      "content": "pro mousawer\n5 ans expérience avec Alhiwar ettounsi\n3 ans avec bein sports",
+      "imageUrl": [
+        "https://res.cloudinary.com/dexzirjuk/image/upload/v1713141616/etnyeyiq7icadapr8s6c.jpg",
+        "https://res.cloudinary.com/dexzirjuk/image/upload/v1713141617/yosaqcgqvwfd9otoxn33.jpg",
+        "https://res.cloudinary.com/dexzirjuk/image/upload/v1713141618/dsm2xdf194ku3s9rnfbg.jpg"
+      ],
+      "price": 20,
+      "userId": "edbf09eb-0c6a-4d6a-a6d0-ec6df246a261",
+      "username": "maamoun",
+      "categoryId": "6670",
+      "categoryName": "",
+      "localisation": "Sousse"
+    },
+    {
+      "id": "5542",
+      "title": "Coiffeur",
+      "content": "Local au centre ville ou à domicilie si vous voulez",
+      "imageUrl": [
+        "https://res.cloudinary.com/dexzirjuk/image/upload/v1714329801/bozxfhekml27azgvdraz.jpg"
+      ],
+      "price": 15,
+      "userId": "edbf09eb-0c6a-4d6a-a6d0-ec6df246a261",
+      "username": "maamoun",
+      "categoryId": "1011",
+      "categoryName": "",
+      "localisation": "Kef"
+    },
+    {
+      "id": "462c",
+      "title": "Livreur",
+      "content": "très rapide",
+      "imageUrl": [
+        "https://res.cloudinary.com/dexzirjuk/image/upload/v1714331851/mhkn05ijzyg5lpheygp2.jpg"
+      ],
+      "price": 7,
+      "userId": "edbf09eb-0c6a-4d6a-a6d0-ec6df246a261",
+      "username": "maamoun",
+      "categoryId": "3773",
+      "categoryName": "",
+      "localisation": "Sfax"
+    },
+    {
+      "id": "70b0",
+      "title": "zalle3",
+      "content": "nezla3 ",
+      "imageUrl": [
+        "https://res.cloudinary.com/dexzirjuk/image/upload/v1717810263/ppy1jdloaetvm73caq8b.jpg"
+      ],
+      "price": 3,
+      "userId": "edbf09eb-0c6a-4d6a-a6d0-ec6df246a261",
+      "username": "maamoun",
+      "categoryId": "6670",
+      "categoryName": "",
+      "localisation": "Sfax"
+    },
+    {
+      "id": "68b5",
+      "title": "zalle3",
+      "content": "nezla3 ",
+      "imageUrl": [
+        "https://res.cloudinary.com/dexzirjuk/image/upload/v1717810263/ppy1jdloaetvm73caq8b.jpg"
+      ],
+      "price": 3,
+      "userId": "edbf09eb-0c6a-4d6a-a6d0-ec6df246a261",
+      "username": "maamoun",
+      "categoryId": "6670",
+      "categoryName": "",
+      "localisation": "Sfax"
+    },
+    {
+      "id": "0b4f",
+      "title": "zalle3",
+      "content": "nezla3 ",
+      "imageUrl": [
+        "https://res.cloudinary.com/dexzirjuk/image/upload/v1717810263/ppy1jdloaetvm73caq8b.jpg"
+      ],
+      "price": 3,
+      "userId": "edbf09eb-0c6a-4d6a-a6d0-ec6df246a261",
+      "username": "maamoun",
+      "categoryId": "6670",
+      "categoryName": "",
+      "localisation": "Sfax"
+    },
+    {
+      "id": "21b0",
+      "title": "aa",
+      "content": "aa",
+      "imageUrl": [
+        "https://res.cloudinary.com/dexzirjuk/image/upload/v1717812132/xtsbp5jhczsr8ajqsvia.png"
+      ],
+      "price": 1,
+      "userId": "edbf09eb-0c6a-4d6a-a6d0-ec6df246a261",
+      "username": "maamoun",
+      "categoryId": "2230",
+      "categoryName": "",
+      "localisation": "Tunis"
+    },
+    {
+      "id": "3c79",
+      "title": "aa",
+      "content": "aa",
+      "imageUrl": [
+        "https://res.cloudinary.com/dexzirjuk/image/upload/v1717812132/xtsbp5jhczsr8ajqsvia.png"
+      ],
+      "price": 1,
+      "userId": "edbf09eb-0c6a-4d6a-a6d0-ec6df246a261",
+      "username": "maamoun",
+      "categoryId": "2230",
+      "categoryName": "",
+      "localisation": "Tunis"
+    },
+    {
+      "id": "fdce",
+      "title": "aa",
+      "content": "azj",
+      "imageUrl": [
+        "https://res.cloudinary.com/dexzirjuk/image/upload/v1717812217/tzbt6zf42fac0z1b0zti.png"
+      ],
+      "price": 3,
+      "userId": "edbf09eb-0c6a-4d6a-a6d0-ec6df246a261",
+      "username": "maamoun",
+      "categoryId": "6670",
+      "categoryName": "",
+      "localisation": "Tunis"
+    }
+  ],
+  "users": [
+    {
+      "id": "d86ff9fd-d680-48a1-a63e-e91093cc1e24",
+      "username": "iheb",
+      "email": "iheb@gmail.com",
+      "password": "123",
+      "role": "prestateur",
+      "phone": "26720354",
+      "status": false
+    },
+    {
+      "id": "d453c8c0-60e6-4353-bd7a-62f154654d70",
+      "username": "jawhar",
+      "email": "jawhar.chaabene98@gmail.com",
+      "password": "123",
+      "role": "admin",
+      "phone": "99264030",
+      "status": true,
+      "gender": "homme"
+    },
+    {
+      "id": "edbf09eb-0c6a-4d6a-a6d0-ec6df246a261",
+      "username": "maamoun",
+      "email": "momo@gmail.com",
+      "password": "123",
+      "role": "prestateur",
+      "phone": "55323216",
+      "status": true,
+      "gender": "homme",
+      "img": [
+        "https://res.cloudinary.com/dexzirjuk/image/upload/v1717809663/axvdjuqy15ugqtqmmxed.png"
+      ]
+    },
+    {
+      "id": "33dac559-df87-4211-b694-e4839fe0f219",
+      "username": "emna",
+      "email": "smaouiemna24@gmail.com",
+      "password": "123",
+      "role": "client",
+      "phone": "22000333",
+      "status": true
+    },
+    {
+      "id": "96fd7f2d-411d-47ee-bea6-a4cb0490e6d4",
+      "username": "Chaabene",
+      "email": "chaabeneatef@gmail.com",
+      "password": "123",
+      "role": "prestateur",
+      "phone": "2245621",
+      "gender": "Homme",
+      "status": true
+    },
+    {
+      "id": "e3fb2e10-07ae-4da7-ac8b-726e51c54d47",
+      "username": "az",
+      "email": "chaabeneatef@gmail.com",
+      "password": "123",
+      "role": "client",
+      "phone": "55323216",
+      "gender": "Homme",
+      "status": true
+    },
+    {
+      "id": "88f41343-d0fb-49a1-abc0-57b65e1c973a",
+      "username": "mest",
+      "email": "aa@gmail.com",
+      "password": "123",
+      "role": "client",
+      "phone": "22000333",
+      "gender": "Homme",
+      "status": true
+    }
+  ],
+  "category": [
+    {
+      "id": "2230",
+      "name": "Accounting / Finance",
+      "sous_categorie": []
+    },
+    {
+      "id": "6670",
+      "name": "Automotive Jobs",
+      "sous_categorie": []
+    },
+    {
+      "id": "2258",
+      "name": "Construction / Facilities",
+      "sous_categorie": []
+    },
+    {
+      "id": "8306",
+      "name": "Education Training",
+      "sous_categorie": []
+    },
+    {
+      "id": "1011",
+      "name": "Healthcare",
+      "sous_categorie": []
+    },
+    {
+      "id": "3773",
+      "name": "Restaurant / Food Service",
+      "sous_categorie": []
+    },
+    {
+      "id": "5195",
+      "name": "Telecommunications",
+      "sous_categorie": []
+    },
+    {
+      "id": "3539",
+      "name": "Transportation / Logistics",
+      "sous_categorie": []
+    }
+  ],
+  "reservations": [
+    {
+      "acceptation": true,
+      "clientId": "jawhar",
+      "id": "667b"
+    },
+    {
+      "id": "66ef",
+      "clientId": "maamoun",
+      "username": "maamoun",
+      "subject": "Développeur Web",
+      "date": "2023-01-02",
+      "time": "00:01",
+      "timeEnd": "01:00",
+      "message": "aa",
+      "acceptation": false
+    },
+    {
+      "id": "bd57",
+      "clientId": "emna",
+      "username": "maamoun",
+      "subject": "Développeur Web",
+      "date": "2024-12-31",
+      "time": "23:59",
+      "timeEnd": "23:58",
+      "message": "hh",
+      "acceptation": true
+    },
+    {
+      "id": "f26c",
+      "clientId": "mahmoud",
+      "username": "maamoun",
+      "subject": "Développeur Web",
+      "date": "2024-01-01",
+      "time": "00:00",
+      "timeEnd": "00:01",
+      "message": "az",
+      "acceptation": false
+    },
+    {
+      "id": "7f0b",
+      "clientId": "mahmoud",
+      "username": "maamoun",
+      "subject": "Photographiste",
+      "date": "2024-01-01",
+      "time": "01:00",
+      "timeEnd": "00:00",
+      "message": "r",
+      "acceptation": true
+    },
+    {
+      "id": "18b9",
+      "clientId": "emna",
+      "username": "maamoun",
+      "subject": "Photographiste",
+      "date": "2025-01-01",
+      "time": "01:00",
+      "timeEnd": "01:01",
+      "message": "d²",
+      "acceptation": true
+    },
+    {
+      "id": "2d78",
+      "clientId": "fakousa",
+      "username": "iheb",
+      "subject": "infirmer",
+      "date": "2024-04-26",
+      "time": "21:07",
+      "timeEnd": "21:07",
+      "message": "lasba",
+      "acceptation": ""
+    }
+  ],
+  "customRoutes": {
+    "/users/:id": "/users/:id"
+  }
+}

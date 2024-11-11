@@ -1,0 +1,9 @@
+<h2>Message</h2>
+<p>Welcome, {{ username }}!</p>
+
+<div *ngIf="acceptedReservation">
+  <p>{{ acceptanceMessage }}</p>
+</div>
+<div *ngIf="!acceptedReservation">
+  <p>No reservations found.</p>
+</div>
